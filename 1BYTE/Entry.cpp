@@ -3,6 +3,7 @@
 #include <string>
 
 #include "Controller.h"
+#include "Instruction.h"
 
 
 int main(int argc, char** args) {
@@ -11,25 +12,23 @@ int main(int argc, char** args) {
 		return 2;
 	}
 	std::string filePath(args[1]);
-	if (filePath.substr(filePath.size() - 6) != ".1basm") {
+	if (filePath.substr(filePath.size() - 5) != ".1bin") {
 		std::cout << "Please select a valid .1basm file!" << std::endl;
 		return 3;
 	}
-	std::ifstream asmIn(filePath, std::ifstream::in);
+	std::ifstream asmIn(filePath, std::ifstream::in | std::ifstream::binary);
 	if (!asmIn.is_open() || !asmIn.good()) {
 		std::cout << "Something went wrong, please try again!" << std::endl;
 		return 4;
 	}*/
 
 	Controller c;
+	c.mainRegister[0] = 0xf;
+	c.mainRegister[1] = 0xf;
 
-	c.mainRegister[0] = 0xF;
-	c.mainRegister[1] = 0xF;
+	c.functionMap.insert(std::pair<byte, void(*)(Controller*, Register*, Register*)>{ (byte)0x02, add });
 
-	c.add(&c.mainRegister[0], &c.mainRegister[1]);
-	c.add(&c.mainRegister[0], &c.mainRegister[1]);
-	c.sub(&c.mainRegister[0], &c.mainRegister[1]);
-	c.sub(&c.mainRegister[1], &c.mainRegister[0]);
+	c.functionMap.at((byte)0x02)(&c, &c.mainRegister[0], &c.mainRegister[1]);
 
 	return 0;
 }
