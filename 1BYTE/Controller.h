@@ -32,7 +32,7 @@ public:
 
 	unsigned int programCount = 0;
 
-	std::map<byte, void(*)(Controller*, Register*, Register*)> functionMap;
+	std::map<byte, std::pair<byte, void(*)(Controller*, byte*)>> functionMap;
 
 	Controller() {}
 	Controller(std::vector<byte> program) : RAM(program) {}

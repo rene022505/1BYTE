@@ -26,9 +26,10 @@ int main(int argc, char** args) {
 	c.mainRegister[0] = 0xf;
 	c.mainRegister[1] = 0xf;
 
-	c.functionMap.insert(std::pair<byte, void(*)(Controller*, Register*, Register*)>{ (byte)0x02, add });
+	c.functionMap.insert(std::pair<byte, std::pair<byte, void(*)(Controller*, byte*)>>{ (byte)0x02, std::pair<byte, void(*)(Controller*, byte*)>{(byte)0x02, add}});
 
-	c.functionMap.at((byte)0x02)(&c, &c.mainRegister[0], &c.mainRegister[1]);
+	byte asd[2] = { (byte)0x0, (byte)0x1 };
+	c.functionMap.at((byte)0x02).second(&c, asd);
 
 	return 0;
 }

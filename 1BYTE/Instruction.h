@@ -3,5 +3,5 @@
 #include "HeaderOfConvenience.h"
 #include "Controller.h"
 
-void add(Controller*, Register*, Register*);
-void sub(Controller*, Register*, Register*);
+void add(Controller*, byte*);
+void sub(Controller*, byte*);
