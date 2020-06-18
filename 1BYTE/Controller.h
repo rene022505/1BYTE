@@ -31,7 +31,7 @@ public:
 	/// Register containing operation flags
 	/// <para>Bit0: zflag - zero flag</para>
 	/// <para>Bit1: cflag - carry for the last operation</para>
-	/// <para>Bit2: </para>
+	/// <para>Bit2: nflag - negative result in last operation</para>
 	/// <para>Bit3: </para>
 	/// <para>Bit4: </para>
 	/// <para>Bit5: </para>
