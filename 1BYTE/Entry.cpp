@@ -5,6 +5,7 @@
 #include "HeaderOfConvenience.h"
 #include "Controller.h"
 #include "Instruction.h"
+#include "Register.h"
 
 
 int main(int argc, char** args) {

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "HeaderOfConvenience.h"
+#include "Register.h"
 
 #include <vector>
 #include <map>
@@ -9,7 +10,7 @@
 
 class Controller {
 public:
-	Register mainRegister[10]{ 0 };
+	Register test(8)[10];
 
 	/// <summary>
 	/// Register containing operation flags
@@ -24,6 +25,9 @@ public:
 	/// </summary>
 	Register flags = 0;
 
+	/// <summary>
+	/// Register for temporary result storage
+	/// </summary>
 	Register operationResult = 0;
 
 	std::vector<unsigned char> RAM;
