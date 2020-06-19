@@ -2,9 +2,9 @@
 
 
 void Controller::run() {
-	do {
+	/*do {
 
-	} while (++(this->programCount) < this->RAM.size());
+	} while (++(this->programCount) < this->RAM.size());*/
 }
 
 void Controller::parseInstr(byte instr) {

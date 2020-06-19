@@ -24,9 +24,9 @@ int main(int argc, char** args) {
 		return 4;
 	}*/
 
-	Controller c;
-	c.mainRegister[0] = 0xf;
-	c.mainRegister[1] = 0xf;
+	Controller c(10, 8);
+	c.registers.at(0).data = boost::dynamic_bitset<>(c.registerSize ,0x0f);
+	c.registers.at(1).data = boost::dynamic_bitset<>(c.registerSize, 0x0f);
 
 	c.functionMap.insert(std::pair<byte, std::pair<byte, fctPtr>>{ (byte)0x02, std::pair<byte, fctPtr>{(byte)0x02, add}});
 

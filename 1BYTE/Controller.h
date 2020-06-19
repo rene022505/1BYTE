@@ -10,34 +10,29 @@
 
 class Controller {
 public:
-	Register test(8)[10];
+	std::vector<Register> registers;
 
 	/// <summary>
 	/// Register containing operation flags
 	/// <para>Bit0: zflag - zero flag</para>
 	/// <para>Bit1: cflag - carry </para>
-	/// <para>Bit2: nflag - negative result in last operation</para>
-	/// <para>Bit3: </para>
-	/// <para>Bit4: </para>
-	/// <para>Bit5: </para>
-	/// <para>Bit6: </para>
-	/// <para>Bit7: </para>
 	/// </summary>
-	Register flags = 0;
+	Register flags = Register(2);
 
 	/// <summary>
 	/// Register for temporary result storage
 	/// </summary>
-	Register operationResult = 0;
-
-	std::vector<unsigned char> RAM;
+	Register operationResult;
 
 	unsigned int programCount = 0;
 
+	short registerSize;
+
 	std::map<byte, std::pair<int, fctPtr>> functionMap;
 
-	Controller() {}
-	Controller(std::vector<byte> program) : RAM(program) {}
+	Controller(int registerCount, short registerSize) :
+		registers(std::vector<Register>(registerCount, Register(registerSize))),
+		operationResult(Register(registerSize)), registerSize(registerSize) {}
 
 public:
 	void parseInstr(byte instr);
