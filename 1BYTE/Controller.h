@@ -22,7 +22,7 @@ public:
 	/// <summary>
 	/// Register for temporary result storage
 	/// </summary>
-	Register operationResult;
+	Register temp;
 
 	unsigned int programCount = 0;
 
@@ -32,10 +32,10 @@ public:
 
 	Controller(int registerCount, short registerSize) :
 		registers(std::vector<Register>(registerCount, Register(registerSize))),
-		operationResult(Register(registerSize)), registerSize(registerSize) {}
+		temp(Register(registerSize)), registerSize(registerSize) {}
 
 public:
-	void parseInstr(byte instr);
+	void parseInstr(byte);
 
-	void run();
+	void run(byte*, int);
 };
