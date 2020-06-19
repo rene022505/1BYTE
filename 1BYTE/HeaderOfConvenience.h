@@ -19,7 +19,15 @@
 #define cbit6(reg) reg &= 0xBF
 #define cbit7(reg) reg &= 0x7F
 
-#define olif(condition, tru, fals) if (condition) { tru; } else { fals; }
-
 typedef unsigned char Register;
 typedef unsigned char byte;
+
+Register getBitAt(Register reg, int bit);
+
+void cBit(Register* reg, int bit);
+
+void sBit(Register* reg, int bit);
+
+#define olif(condition, tru, fals) if (condition) { tru; } else { fals; }
+
+#define fctPtr void(*)(Controller*, byte*)

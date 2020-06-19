@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 
+#include "HeaderOfConvenience.h"
 #include "Controller.h"
 #include "Instruction.h"
 
@@ -26,7 +27,7 @@ int main(int argc, char** args) {
 	c.mainRegister[0] = 0xf;
 	c.mainRegister[1] = 0xf;
 
-	c.functionMap.insert(std::pair<byte, std::pair<byte, void(*)(Controller*, byte*)>>{ (byte)0x02, std::pair<byte, void(*)(Controller*, byte*)>{(byte)0x02, add}});
+	c.functionMap.insert(std::pair<byte, std::pair<byte, fctPtr>>{ (byte)0x02, std::pair<byte, fctPtr>{(byte)0x02, add}});
 
 	byte asd[2] = { (byte)0x0, (byte)0x1 };
 	c.functionMap.at((byte)0x02).second(&c, asd);

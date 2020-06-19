@@ -6,3 +6,7 @@ void Controller::run() {
 
 	} while (++(this->programCount) < this->RAM.size());
 }
+
+void Controller::parseInstr(byte instr) {
+
+}

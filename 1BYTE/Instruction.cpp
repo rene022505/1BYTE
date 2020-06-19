@@ -2,12 +2,27 @@
 
 void add(Controller* c, byte* params) {
 	Register* a = &(c->mainRegister[params[0]]);
-	Register* b = &(c->mainRegister[params[1]]);
+	Register* b = &(c->mainRegister[params[0]]);
 
-	// cflag
-	olif(*a + *b > 0xFF, sbit1(c->flags), cbit1(c->flags))
+	for (int i = 0; i < 8; i++) {
+		if (getBitAt(*a, i) != 0 && getBitAt(*b, i) != 0 && getBitAt((c->flags), 1) != 0) {
+			sBit(&(c->flags), 1);
+			sBit(&(c->operationResult), i);
+		} else if (getBitAt(*a, i) != 0 && getBitAt(*b, i) != 0 || ((getBitAt(*a, i) != 0 || getBitAt(*b, i) != 0) && getBitAt((c->flags), 1) != 0)) {
+			sBit(&(c->flags), 1);
+			cBit(&(c->operationResult), i);
+		} else if (getBitAt(*a, i) != 0 || getBitAt(*b, i) != 0) {
+			cBit(&(c->flags), 1);
+			sBit(&(c->operationResult), i);
+		} else if (getBitAt((c->flags), 1) != 0) {
+			cBit(&(c->flags), 1);
+			sBit(&(c->operationResult), i);
+		} else {
+			cBit(&(c->operationResult), i);
+		}
+	}
 
-	*a = *a + *b;
+	*a = c->operationResult;
 
 	// zflag 
 	olif(*a == 0, sbit0(c->flags), cbit0(c->flags))

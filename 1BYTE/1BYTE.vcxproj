@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Entry.cpp" />
+    <ClCompile Include="HeaderOfConvenience.cpp" />
     <ClCompile Include="Instruction.cpp" />
   </ItemGroup>
   <ItemGroup>
