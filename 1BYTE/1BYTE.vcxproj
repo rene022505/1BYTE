@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Entry.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -158,19 +161,6 @@
       <AdditionalLibraryDirectories>C:\Dev\_LIBRARIES\boost_1_73_0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Controller.cpp" />
-    <ClCompile Include="Entry.cpp" />
-    <ClCompile Include="Instruction.cpp" />
-    <ClCompile Include="RAM.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Controller.h" />
-    <ClInclude Include="HeaderOfConvenience.h" />
-    <ClInclude Include="Instruction.h" />
-    <ClInclude Include="RAM.h" />
-    <ClInclude Include="Register.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

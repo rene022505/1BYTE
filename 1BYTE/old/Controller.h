@@ -20,9 +20,16 @@ public:
 	Register flags = Register(2);
 
 	/// <summary>
-	/// Register for temporary result storage
+	/// Register for storing values from immediate instructions like addi/subi etc
 	/// </summary>
-	Register temp;
+	Register immediateValue = Register(1);
+
+	/// <summary>
+	/// Register for temporary result storage
+	/// <para>Register0: temp register for addi</para>
+	/// <para>Register1: temp register for subi</para>
+	/// </summary>
+	std::vector<Register> temp;
 
 	unsigned int programCount = 0;
 
@@ -30,9 +37,9 @@ public:
 
 	std::map<byte, std::pair<int, fctPtr>> functionMap;
 
-	Controller(int registerCount, short registerSize) :
-		registers(std::vector<Register>(registerCount, Register(registerSize))),
-		temp(Register(registerSize)), registerSize(registerSize) {}
+	Controller(int _registerCount, short _registerSize) :
+		registers(std::vector<Register>(_registerCount, Register(_registerSize))),
+		temp(std::vector<Register>(2, Register(_registerSize))), registerSize(_registerSize) {}
 
 public:
 	void parseInstr(byte);

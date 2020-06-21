@@ -18,31 +18,5 @@
     <ClCompile Include="Entry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Controller.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Instruction.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RAM.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Controller.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Instruction.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HeaderOfConvenience.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Register.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RAM.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
