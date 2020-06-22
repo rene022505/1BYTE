@@ -21,6 +21,20 @@
   <ItemGroup>
     <ClCompile Include="Entry.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Controller\Controller.h" />
+    <ClInclude Include="Controller\CPU\ALU\ALU.h" />
+    <ClInclude Include="Controller\CPU\CPU.h" />
+    <ClInclude Include="Controller\CPU\CU\CU.h" />
+    <ClInclude Include="Controller\CPU\Instructions\Instruction.h" />
+    <ClInclude Include="Controller\CPU\IO\IO.h" />
+    <ClInclude Include="Controller\CPU\Register\Register.h" />
+    <ClInclude Include="Controller\Memory\RAM\RAM.h" />
+    <ClInclude Include="Controller\Memory\ROM\ROM.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="How does a computer work.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

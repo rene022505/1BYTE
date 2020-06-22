@@ -1,0 +1,11 @@
+CU(control unit):
+CU tells the CPU what operation to perfom with what register(s).
+CU manages the input and output registers and memory flow towards and from the CPU.
+
+CPU(central processing unit):
+Performs an operation on the input data and returns the result.
+Gives additional informaton about the last operation(Flags e.g. zero flag, the last operation returned 0).
+
+Register:
+Small data storage components inside the CPU. 
+Frequently used data is stored here due the close physical location to the ALU and CU.

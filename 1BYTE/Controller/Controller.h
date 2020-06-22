@@ -5,6 +5,4 @@
 #include "./Memory/ROM/ROM.h"
 
 
-class Controller {
-
-};
+class Controller {};
