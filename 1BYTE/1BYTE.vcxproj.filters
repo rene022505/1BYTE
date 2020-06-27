@@ -18,6 +18,9 @@
     <ClCompile Include="Entry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Controller\Memory\ROM\ROM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controller\Controller.h">
@@ -47,8 +50,15 @@
     <ClInclude Include="Controller\CPU\IO\IO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Controller\Memory\ROM\ROM.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\Memory\RAM\RAM.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="How does a computer work.txt" />
+    <Text Include="CMakeLists.txt" />
   </ItemGroup>
 </Project>

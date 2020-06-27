@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Controller\Memory\ROM\ROM.cpp" />
     <ClCompile Include="Entry.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -30,9 +31,12 @@
     <ClInclude Include="Controller\CPU\IO\IO.h" />
     <ClInclude Include="Controller\CPU\Register\Register.h" />
     <ClInclude Include="Controller\Memory\RAM\RAM.h" />
+    <ClInclude Include="Controller\Memory\RAM\RAM.hpp" />
     <ClInclude Include="Controller\Memory\ROM\ROM.h" />
+    <ClInclude Include="Controller\Memory\ROM\ROM.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="CMakeLists.txt" />
     <Text Include="How does a computer work.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

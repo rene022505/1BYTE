@@ -3,8 +3,8 @@
 class Controller;
 
 #include "./CPU/CPU.h"
-#include "./Memory/RAM/RAM.h"
-#include "./Memory/ROM/ROM.h"
+#include "./Memory/RAM/RAM.hpp"
+#include "./Memory/ROM/ROM.hpp"
 
 
 class Controller {
