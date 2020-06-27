@@ -23,6 +23,7 @@
     <ClCompile Include="Entry.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Controller\BUS\BUS.hpp" />
     <ClInclude Include="Controller\Controller.h" />
     <ClInclude Include="Controller\CPU\ALU\ALU.h" />
     <ClInclude Include="Controller\CPU\CPU.h" />

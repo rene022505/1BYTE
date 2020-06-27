@@ -56,6 +56,9 @@
     <ClInclude Include="Controller\Memory\RAM\RAM.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Controller\BUS\BUS.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="How does a computer work.txt" />
